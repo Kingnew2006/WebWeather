@@ -1,0 +1,357 @@
+@import "../../style/Mixins.scss";
+
+.MainContainer {
+    margin: 0 auto;
+    max-width: 1920px;
+    margin-top: 10px;
+
+    &_buttons {
+        display: flex;
+        margin-top: 20px;
+        width: 100%;
+        gap: 1495px;
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: "DancingFont", cursive, sans-serif;
+            color: var(--text);
+            border: none;
+            background-color: var(--blurred);
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: var(--drop-shadow);
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+    }
+}
+
+.SubMainCon {
+    width: 100%;
+    height: 100%;
+    margin-left: 110px;
+}
+
+//About Con
+
+.AboutTheCity {
+
+
+    &_Con {
+    width: 90%;
+    max-width: 1700px;
+    height: 70px;
+    border-radius: 50px;
+    box-shadow: var(--drop-shadow);
+    margin-top: 20px;
+    position: relative;
+    
+        &_title {
+            @include Title;
+        
+        }
+
+    }
+
+
+
+    &_Info_Con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        gap: 114px;
+        font-family: "DancingFont", cursive, sans-serif;
+        font-size: 32px;
+        position: relative;
+        bottom: 15px;
+    }
+}
+
+
+
+
+// TODAY FORECAST
+.TodayContainer {
+    display: flex;
+}
+
+.NowWeather_Con {
+    width: 80%;
+    max-width: 800px;
+    height: 413px;
+    border-radius: 50px;
+    box-shadow: var(--drop-shadow);
+    margin-top: 40px;
+
+    &_title {
+        @include Title;
+    }
+}
+
+.NowWeather_Main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 305px 1fr 1fr;
+    grid-template-rows: 70% 100px;
+
+    &_Just {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &_mainlyText {
+            font-size: 20px;
+            color: var(--text);
+        }
+
+        &_Img {
+            transform: scale(2);
+            position: relative;
+            top: 15px;
+        }
+
+        &_Degree {
+            font-size: 32px;
+            color: var(--text);
+            z-index: 1;
+        }
+    }
+
+    &_Details {
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+         white-space: nowrap;
+        justify-content: center;
+        gap: 5px;
+        
+    }
+
+    &_Wind {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 26px;
+
+        & > div {
+            font-size: 20px;
+            color: var(--text);
+        }
+    }
+
+    &_SunsetInfo {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        gap: 10px;
+    }
+
+}
+
+.TodayForecast_Con {
+    display: grid;
+    grid-template-columns: repeat(4, 170px);
+    grid-gap: 40px;
+    grid-template-rows: repeat(2, 170px);
+    margin-top: 50px;
+    margin-left: 100px;
+     
+}
+
+.HourlyMain {
+    position: relative;
+    transition: all 0.8s ease 0s;
+ 
+    &:hover .HourlyMain_Front {
+        transform: rotateY(180deg);
+    }
+    
+    &:hover .HourlyMain_Back {
+        transform: rotateY(360deg);
+    }
+}
+
+.HourlyMain_Front , .HourlyMain_Back {
+    box-shadow: var(--drop-shadow);
+    transition: all 0.8s ease 0s;
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+
+ 
+.HourlyMain_Back  {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: auto;
+     
+
+    
+    &_Info {
+        font-size: 16px;
+    }
+}
+
+.HourlyMain_Front {
+
+
+
+    &_Time {
+        color: var(--titleText);
+    }
+
+    &_Img {
+        transform: scale(2.5);
+        margin-top: 35px;
+    }
+
+    &_Degree {
+        color: var(--text);
+        font-size: 32px;
+        z-index: 2;
+    }
+}
+
+
+//daily
+
+.DailyForecast_Con {
+    display: grid;
+    grid-template-columns: repeat(2 , 800px);
+    grid-template-rows: repeat(3 , 165px);
+    column-gap: 100px;
+    row-gap: 25px;
+    margin-top: 41px;
+}
+
+
+.DayMainCon {
+    position: relative;
+
+    &:hover .DailyMain_Front {
+        transform: rotateY(180deg);
+    }
+    
+    &:hover .DailyMain_Back {
+        transform: rotateY(360deg);
+    }
+}
+
+.DailyMain_Front , .DailyMain_Back {
+    box-shadow: var(--drop-shadow);
+    transition: all 0.8s ease 0s;
+    width: 800px;
+    height: 165px;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 50px;
+
+}
+
+
+ 
+.DailyMain_Back  {
+    transform: rotateY(180deg);
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+
+    &_Con1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 5px;
+        column-gap: 60px;
+        width: fit-content;
+    }
+    &_Con2 {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        gap: 5px;
+        overflow: hidden;
+    }
+
+}
+
+.DailyMain_Front {
+
+    &_Con {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+        margin-top: 15px
+    }
+
+    &_Title {
+        @include Title;
+    }
+
+    &_Img {
+        transform: scale(2.5);
+         
+    }
+
+    &_Degree {
+        color: var(--text);
+        font-size: 32px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &_MaxMin {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--text);
+        gap: 10px;
+    }
+
+
+}
+//Main 
+

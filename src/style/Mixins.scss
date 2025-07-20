@@ -1,0 +1,22 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin Title {
+    font-size: 32px;
+    font-family: "DancingFont", cursive, sans-serif;
+    color: var(--sunRise);
+    position: relative;
+    bottom: 20px;
+    left: 40px;
+}
+
+@mixin Text {
+    font-size: 16px;
+    font-family: "DancingFont", cursive, sans-serif;
+    color: var(--text);
+}
+
+

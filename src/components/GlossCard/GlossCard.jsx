@@ -21,7 +21,7 @@ const throttle = (func, delay) => {
   };
 };
 
-const GlossCard = React.memo(({ children, className, width }) => {
+const GlossCard = React.memo(({ children, className, width , heigth }) => {
   const cardRef = useRef(null);
 
   // Управляем блик-позицией в state, но оптимизируем обновления через throttle
@@ -123,11 +123,12 @@ const GlossCard = React.memo(({ children, className, width }) => {
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
       style={{
-        cursor: lockedPos ? "pointer" : "default",
+        cursor: "default",
         transform: `perspective(500px) rotateX(${parallax.y}deg) rotateY(${parallax.x}deg)`,
         // пример использования CSS-переменных в стиле (если нужно)
         // backgroundPosition: `var(--gloss-x) var(--gloss-y)`,
         width: width || "auto",
+        height: heigth || "auto",
       }}
     >
       {[...Array(3)].map((_, i) => {

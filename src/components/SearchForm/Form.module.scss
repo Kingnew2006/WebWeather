@@ -1,0 +1,64 @@
+.FormMainContainer {
+  margin-top: 66px;
+  margin-left: 646px;  
+   
+}
+
+.SearchPageForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 50px;
+    gap: 10px;
+    background-color: #FFECB3;
+    position: relative;
+}
+ 
+.SearchPageGloss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.Input {
+  all: unset;
+  width: 280px;
+  height: 50px;
+  font-size: 20px;
+  color: #FFECB3;
+  font-family: "DancingFont", cursive, sans-serif;
+}
+
+
+
+.InputContainer {
+  border: 1px solid #0D47A1;
+  border-radius: 50px;
+  width: 300px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(at 12.146248391533922% 80.54556676685273%, #0D48A1 0px, transparent 50%), radial-gradient(at 14.815636508852108% 10.38670030055818%, #FFECB3 0px, transparent 50%), radial-gradient(at 79.61929271864045% 24.55587161872048%, #FFD64F 0px, transparent 50%) #4FC3F7;;
+} 
+
+.FormButton {
+  all: unset;
+  color: #0D47A1;
+  font-size: 20px;
+  font-family: "DancingFont", cursive, sans-serif;
+  cursor: pointer;
+  padding: 10px 20px;
+
+  &:hover {
+    color: black;
+  }
+}

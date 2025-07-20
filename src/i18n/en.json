@@ -1,0 +1,61 @@
+{
+  "weather": {
+    "description": "Weather",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "forecast": "Forecast",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "feels_like": "Feels Like",
+    "presure": "Pressure",
+    "visibility": "Visibility",
+    "gust": "Gust",
+    "deg": "Wind Direction",
+    "clouds": "Cloudiness",
+    "speed": "Speed",
+    "max": "Max",
+    "min": "Min",
+    "wind_details": "Wind Details",
+    "pop": "Probability of Rain"
+  },
+  "city": {
+    "description": "About the City",
+    "city": "City",
+    "country": "Country",
+    "population": "Population",
+    "timezone": "Timezone"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "Until": "Until",
+    "loading": "Loading...",
+    "error": "Error",
+    "not_found": "Not Found",
+    "mainly": "Mainly",
+    "type": "Type a city. Get the weather. Simple.",
+    "fast": "Fast, beautiful forecasts built for humans.",
+    "search": "Search",
+    "to_searchPage": "To Search Page"
+  },
+  "days": {
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Sunday": "Sunday"
+  },
+  "conditions": {
+    "Clear": "Clear",
+    "Clouds": "Clouds",
+    "Rain": "Rain",
+    "Drizzle": "Drizzle",
+    "Thunderstorm": "Thunderstorm",
+    "Snow": "Snow",
+    "Mist": "Mist"
+  }
+}
