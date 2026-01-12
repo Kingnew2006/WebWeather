@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <div className={styled.HeaderMainCon}>
         <GlossCard className={styled.HeaderGloss} width="1920px">
-          <img src="/public/main/MainLogo.svg" alt="" />
+          <img src="./main/MainLogo.svg"  alt="" />
         </GlossCard>
       </div>
     </header>

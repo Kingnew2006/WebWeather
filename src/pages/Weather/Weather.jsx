@@ -35,7 +35,7 @@ const Weather = () => {
     <main className={styled.MainContainer}>
       <div className={styled.SubMainCon}>
         <div className={styled.MainContainer_buttons}>
-          <button onClick={() => window.location.replace("/")}>
+          <button onClick={() => window.location.replace(`${import.meta.env.BASE_URL}`)}>
           to SearchPage
           </button>
           <LangSwitcher />

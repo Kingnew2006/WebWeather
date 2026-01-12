@@ -4,7 +4,7 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements,
-  createBrowserRouter,
+  createHashRouter,
   useParams,
 } from "react-router-dom";
 import MainPageLayout from "./layouts/MainPageLayout";
@@ -13,7 +13,7 @@ import Weather from "./pages/Weather/Weather";
 import WeatherLoader from "./API/Loaders/WeatherLoader";
 
 export default function App() {
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainPageLayout />}>
         <Route index element={<SearchPage />} />
